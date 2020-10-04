@@ -30,12 +30,10 @@
 
 #define FAST_RUN
 
-#define dummy_for_diff
-
 #ifdef FAST_RUN
 
-#define PACKET_ARRIVAL_RATE 400, 1000, 2000, 5000, 8000, 10000 /* packets per second */
-#define PACKET_LENGTH 500 /* bits */
+#define PACKET_ARRIVAL_RATE 400, 1000 /* packets per second */
+#define PACKET_LENGTH 2000 /* bits */
 #define LINK_BIT_RATE 1e6 /* bits per second */
 //#define RUNLENGTH 10 /* packets */
 #define RUNLENGTH 10e6 /* packets */
