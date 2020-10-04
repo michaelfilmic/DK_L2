@@ -33,14 +33,13 @@
 
 #ifdef FAST_RUN
 
-#define PACKET_ARRIVAL_RATE 1000, 1e4, 1e5, 1e6 /* packets per second */
+#define PACKET_ARRIVAL_RATE 1000, 3000, 5000, 8000, 1e4  /* packets per second */
 #define PACKET_LENGTH 2000 /* bits */
 #define LINK_BIT_RATE 1e6 /* bits per second */
-//#define RUNLENGTH 10 /* packets */
-#define RUNLENGTH 10e3 /* packets */
+#define RUNLENGTH 2e3 /* packets */
 
 /* Comma separated list of random seeds to run. */
-#define RANDOM_SEED_LIST 400050636
+#define RANDOM_SEED_LIST 400050636, 400099173, 225, 766, 590, 309, 519, 430, 638, 126 
 
 #else
 
@@ -54,7 +53,7 @@
 
 #endif //FAST_RUN
 
-#define PACKET_XMT_TIME ((double) PACKET_LENGTH/LINK_BIT_RATE)
+#define PACKET_XMT_TIME exponential_generator((double) PACKET_LENGTH/LINK_BIT_RATE)
 #define BLIPRATE (RUNLENGTH/1000)
 
 /******************************************************************************/

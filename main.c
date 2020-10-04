@@ -117,7 +117,7 @@ main(void)
          * Initialize the simulation_run data variables, declared in main.h.
          */
         
-        data.packet_arrival_rate = PACKET_ARRIVAL_RATE_LIST[i];
+        data.packet_arrival_rate = exponential_generator(PACKET_ARRIVAL_RATE_LIST[i]);
         data.blip_counter = 0;
         data.arrival_count = 0;
         data.number_of_packets_processed = 0;
