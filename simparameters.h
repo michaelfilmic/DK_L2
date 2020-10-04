@@ -29,14 +29,14 @@
 /******************************************************************************/
 
 #define FAST_RUN
-#define NO_CSV_OUTPUT
+//#define NO_CSV_OUTPUT
 
 #ifdef FAST_RUN
 
 #define PACKET_ARRIVAL_RATE 1000, 3000, 5000, 8000, 1e4  /* packets per second */
 #define PACKET_LENGTH 2000 /* bits */
 #define LINK_BIT_RATE 1e6 /* bits per second */
-#define RUNLENGTH 2e3 /* packets */
+#define RUNLENGTH 2e1 /* packets */
 
 /* Comma separated list of random seeds to run. */
 #define RANDOM_SEED_LIST 400050636, 400099173, 225, 766, 590, 309, 519, 430, 638, 126 
