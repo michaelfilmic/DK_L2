@@ -94,6 +94,7 @@ output_results(Simulation_Run_Ptr simulation_run)
 
   printf("\n");
 
+  #ifndef NO_CSV_OUTPUT
   /*
   // create a csv file
   FILE* fp;
@@ -126,6 +127,7 @@ output_results(Simulation_Run_Ptr simulation_run)
 
   fclose(fp);
   */
+  #endif
 }
 
 

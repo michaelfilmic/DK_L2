@@ -29,6 +29,7 @@
 /******************************************************************************/
 
 #define FAST_RUN
+#define NO_CSV_OUTPUT
 
 #ifdef FAST_RUN
 
@@ -36,7 +37,7 @@
 #define PACKET_LENGTH 2000 /* bits */
 #define LINK_BIT_RATE 1e6 /* bits per second */
 //#define RUNLENGTH 10 /* packets */
-#define RUNLENGTH 10e6 /* packets */
+#define RUNLENGTH 10e3 /* packets */
 
 /* Comma separated list of random seeds to run. */
 #define RANDOM_SEED_LIST 400050636
