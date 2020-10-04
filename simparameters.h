@@ -30,6 +30,8 @@
 
 #define FAST_RUN
 
+#define dummy_for_diff
+
 #ifdef FAST_RUN
 
 #define PACKET_ARRIVAL_RATE 400, 1000, 2000, 5000, 8000, 10000 /* packets per second */
