@@ -66,6 +66,7 @@ main(void)
 
   int j;
 
+  #ifndef NO_CSV_OUTPUT
   // create a csv file
   FILE* fp;
   char data_set_name[] = "./Q2.csv";
@@ -84,6 +85,7 @@ main(void)
 
   fprintf(fp, "\n");
   fclose(fp);
+  #endif
 
 
   for (int i = 0; i < (sizeof(PACKET_ARRIVAL_RATE_LIST)/sizeof(double)); i ++)
@@ -177,6 +179,7 @@ main(void)
       for_avg_acc.random_seed /= size_rand_seed;
 
 
+  #ifndef NO_CSV_OUTPUT
       fp = fopen(data_set_name, "a");
       //cell/element name/type
 
@@ -201,6 +204,7 @@ main(void)
 
       fprintf(fp, "\n");
       fclose(fp);
+  #endif
 
 
   }
