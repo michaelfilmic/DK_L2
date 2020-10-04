@@ -200,12 +200,29 @@ main(void)
 
       //fprintf(fp, ("Mean Delay (msec),"));
       fprintf(fp, "%f, ",
-         1e3*for_avg_acc.accumulated_delay/data.number_of_packets_processed);
+         1e3*for_avg_acc.accumulated_delay/for_avg_acc.number_of_packets_processed);
 
       fprintf(fp, "\n");
       fclose(fp);
   #endif
 
+      double xmtted_fraction;
+      printf("\n");
+      printf("avg Random Seed = %d \n", for_avg_acc.random_seed);
+      printf("avg Packet arrival count = %ld \n", for_avg_acc.arrival_count);
+    
+      xmtted_fraction = (double) for_avg_acc.number_of_packets_processed /
+        for_avg_acc.arrival_count;
+    
+      printf("avg Transmitted packet count  = %ld (Service Fraction = %.5f)\n",
+         for_avg_acc.number_of_packets_processed, xmtted_fraction);
+    
+      printf("avg Arrival rate = %.3f packets/second \n", (double) for_avg_acc.packet_arrival_rate);
+    
+      printf("avg Mean Delay (msec) = %f \n",
+         1e3*for_avg_acc.accumulated_delay/for_avg_acc.number_of_packets_processed);
+    
+      printf("\n");
 
   }
 
