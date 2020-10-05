@@ -137,6 +137,8 @@ main(void)
 
         random_generator_initialize(random_seed);
 
+        //clock_t prog_t = clock();
+        //printf("before schedule arrival event program time %f\n", prog_t);
         /* 
          * Schedule the initial packet arrival for the current clock time (= 0).
          */
@@ -144,11 +146,13 @@ main(void)
         schedule_packet_arrival_event(simulation_run, 
                       simulation_run_get_time(simulation_run));
 
+        //printf("after schedule arrival event program time %f\n", clock());
         /* 
          * Execute events until we are finished. 
          */
 
         while(data.number_of_packets_processed < RUNLENGTH) {
+          //printf("while loop program time %f\n", clock());
           simulation_run_execute_event(simulation_run);
         }
 

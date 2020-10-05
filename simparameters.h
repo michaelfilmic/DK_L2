@@ -33,14 +33,14 @@
 
 #ifdef FAST_RUN
 
-#define PACKET_ARRIVAL_RATE 40, 100  /* packets per second */
-#define PACKET_LENGTH 50 /* bits */
+#define PACKET_ARRIVAL_RATE 40  /* packets per second */
+#define PACKET_LENGTH 10 /* bits */
 #define LINK_BIT_RATE 1e6 /* bits per second */
 //#define RUNLENGTH 10 /* packets */
-#define RUNLENGTH 10e3 /* packets */
+#define RUNLENGTH 10e0 /* packets */
 
 /* Comma separated list of random seeds to run. */
-#define RANDOM_SEED_LIST 400050636, 400099173
+#define RANDOM_SEED_LIST 400050636
 
 #else
 
