@@ -37,7 +37,7 @@
 #define PACKET_LENGTH 10 /* bits */
 #define LINK_BIT_RATE 1e6 /* bits per second */
 //#define RUNLENGTH 10 /* packets */
-#define RUNLENGTH 10e0 /* packets */
+#define RUNLENGTH 3 /* packets */
 
 /* Comma separated list of random seeds to run. */
 #define RANDOM_SEED_LIST 400050636

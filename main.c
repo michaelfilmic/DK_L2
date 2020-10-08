@@ -152,7 +152,7 @@ main(void)
          */
 
         while(data.number_of_packets_processed < RUNLENGTH) {
-          //printf("while loop program time %f\n", clock());
+          printf("MM_debug while loop program time \n");
           simulation_run_execute_event(simulation_run);
         }
 
